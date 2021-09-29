@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery service | MyOnlineMeal.com</title>
+    <link rel="stylesheet" href="css/order.css">
+
+	<script>
+		// Form validation
+		function validate() {
+		   if( document.myForm.Name.value == "" ) {
+			  alert( "Please provide your name!" );
+			  document.myForm.Name.focus() ;
+			  return false;
+		   }
+		   if( document.myForm.EMail.value == "" ) {
+			  alert( "Please provide your Email!" );
+			  document.myForm.EMail.focus() ;
+			  return false;
+		   }
+		   if( document.myForm.Zip.value == "" ||
+		   isNaN( document.myForm.Zip.value ) ||
+		   document.myForm.Zip.value.length != 5 ) {
+			  alert( "Please provide a zip in the format #####." );
+			  document.myForm.Zip.focus() ;
+			  return false;
+		   }
+		   if( document.myForm.Country.value == "-1" ) {
+			  alert( "Please provide your country!" );
+			  return false;
+		   }
+		   return( true );
+		}
+	 </script>
+</head>
+<body>
+	<form action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());">
+		Name: <input type="text" id="name"/><br>
+		E-mail: <input type="text" id="email"/><br>
+		Enter Order: <input type="text" id="order"/><br>
+		<input type="submit">
+	</form>
+		<div id="heading">
+			<br>
+			<h1 align="center">Menu</h1>
+		</div>
+		
+		<hr><hr>
+		
+		<div id="s1">
+			<img align="left" src="img/starter.jpg" height="100" width="180">
+			
+			<h2><center>Starter</h2>
+				<ul align=right>
+					<li>Aaloo tikki</li>
+					<li>Paneer Tikki </li>
+					<li>Masala papad</li>
+					<li>Masala Kurkure</li>
+					
+				</ul>   
+		</div>
+		
+		<hr>
+		
+		<div id="s2">
+			<img align="left" src="img/veg.jpg" height="100" width="180">
+			<h2><center>Vegitarian</h2>
+				<ul align=right>
+					<li>Shev bhaji</li>
+					<li>Dal tadka </li>
+					<li>Masala Paneer</li>
+					<li>Mix veg</li>
+					
+				</ul>  
+		</div>
+		
+		<hr>
+		
+		<div id="s3">
+			<img align="left" src="img/non-veg.jpg" height="100" width="180">
+			<h2><center>Non-Vegitarian</h2>
+				<ul align=right>
+					<li>Chiken</li>
+					<li>Biryani </li>
+					<li>Fish</li>
+					<li>Omlet</li>
+					
+				</ul>  
+		</div>
+		
+		<hr>
+		
+		
+		<div id="s4">
+			<img align="left" src="img/dessert.jpg" height="100" width="180">
+			<h2><center>Dessert</h2>
+				<ul align=right>
+					<li>Rasmalai</li>
+					<li>Gulab jamun </li>
+					<li>Rasgulla</li>
+					<li>Paneer Jilebi</li>
+					
+				</ul>  
+		</div>
+		
+		<hr>
+		
+		<div id="s5">
+			<img align="left" src="img/juice.jpg" height="100" width="180">
+			<h2><center>Juice</h2>
+				<ul align=right>
+					<li>Pineapple</li>
+					<li>Pomogranet </li>
+					<li>Orange</li>
+					<li>Milkshake</li>
+					
+				</ul>  
+		</div>
+		
+		<hr><hr>
+		
+		<div id="footer">
+			<a href="mahajanprajkta21@gmail.com">mahajanprajkta21@gmail.com</a>
+			</p>
+		</footer>
+	
+	</body>
+</html>
